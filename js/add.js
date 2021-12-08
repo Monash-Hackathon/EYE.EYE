@@ -22,9 +22,8 @@ function addList()
 
     //Defining variable and assigning it with the value of the respective HTML reference
     let tempValue = tempRef.value;
-
-
-    if (tempValue < 30 && tempValue > 44) 
+    let tempNumber = Number(tempValue);
+    if (tempNumber < 30 || tempNumber > 44) 
     {    
         alert("Invalid Temperature Input")
         return;
@@ -41,4 +40,4 @@ function addList()
         window.location = "history.html";
         
     }
-x}
+}
