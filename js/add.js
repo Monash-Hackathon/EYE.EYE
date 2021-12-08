@@ -1,13 +1,18 @@
 let dateRef = document.getElementById("inputDate");
 let timeRef = document.getElementById("inputTime");
 let placesRef = document.getElementById("inputLocation");
+let nameRef = document.getElementById("inputName");
 
 dateRef.innerText = new Date().toDateString();
 timeRef.innerText = new Date().toLocaleTimeString();
 
-let yourLoc = localStorage.getItem('location');
+let yourLoc = retrieveData('location');
+
 placesRef.innerText = yourLoc;
 
+let yourName = retrieveData('name');
+
+nameRef.innerText = yourName;
 
 function addList() 
 {
@@ -37,41 +42,3 @@ function addList()
         
     }
 x}
-
-/*
-function getBase64Image(img) {
-    // Create an empty canvas element
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-    
-    // Copy the image contents to the canvas
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    
-    // Get the data-URL formatted image
-    // Firefox supports PNG and JPEG. You could check img.src to
-    // guess the original format, but be aware the using "image/jpg"
-    // will re-encode the image.
-    var dataURL = canvas.toDataURL("image/png");
-    
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-    }
-    Then
-    
-    var a = new Image(),
-        b = new Image();
-    a.src = url_a;
-    b.src = url_b;
-    
-    var a_base64 = getBase64Image(a),
-        b_base64 = getBase64Image(b);
-    
-    if (a_base64 === b_base64)
-    {
-        // they are identical
-    }
-    else
-    {
-        // you can probably guess what this means
-    }*/
