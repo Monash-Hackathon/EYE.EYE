@@ -4,7 +4,7 @@ let placesRef = document.getElementById("smtg");
 
 dateRef.innerText = `${new Date().toDateString}`;
 timeRef.innerText = `${new Date().toLocaleTimeString}`;
-placesRef.innerText = location;
+placesRef.innerText = theLocation;
 
 
 function addList() 

@@ -19,6 +19,7 @@ function getLocation() {
 function showData(result)
 {
     let data = result.results[0];
-    location = data.formatted;
+    theLocation = data.formatted;
 }
   
+getLocation();
