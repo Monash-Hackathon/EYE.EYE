@@ -1,6 +1,7 @@
 
 const RECORD_KEY = "record";
-const DATA_KEY = "data"
+const DATA_KEY = "data";
+const LOC_KEY = "location";
 
 
 class Data
@@ -145,6 +146,7 @@ let checkRecord = new History();
 let myData = new Data();
 
 
+
 if (checkData(RECORD_KEY) == true)
 {
     let dataRetrieved = retrieveData(RECORD_KEY);  
@@ -160,11 +162,11 @@ else if (checkData(RECORD_KEY) == false)
 if (checkData(DATA_KEY) == true)
 {
     let dataRetrieved = retrieveData(DATA_KEY);  
-    checkRecord.fromData(dataRetrieved);
+    myData.fromData(dataRetrieved);
 
 }
 else if (checkData(DATA_KEY) == false)
 {   
-    updateData(DATA_KEY, checkRecord);
+    updateData(DATA_KEY, myData);
 }
 

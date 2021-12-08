@@ -3,15 +3,10 @@ let theLocation = ""
 function getLocation() {
     let lat = 0;
     let long = 0;
-    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
           lat = position.coords.latitude;
           long = position.coords.longitude;
       });
-    } else { 
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-
     dataReverseGeo(long, lat, "showData");
 
 }
@@ -23,3 +18,5 @@ function showData(result)
 }
   
 getLocation();
+
+updateData(LOC_KEY, theLocation);

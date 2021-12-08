@@ -4,8 +4,15 @@ let placesRef = document.getElementById("smtg");
 
 dateRef.innerText = `${new Date().toDateString}`;
 timeRef.innerText = `${new Date().toLocaleTimeString}`;
-placesRef.innerText = theLocation;
 
+if (theLocation == "")
+{
+    placesRef.innerText = retrieveData(LOC_KEY);
+}
+else
+{
+    placesRef.innerText = theLocation;
+}
 
 function addList() 
 {
@@ -24,9 +31,17 @@ function addList()
     }
     else 
     {
-        myData.date(dateRef);
-        myData.time(timeRef);
-        myData.place(placesRef);
+        myData.date(dateRef.value);
+        myData.time(timeRef.value);
+        if (theLocation == "")
+        {
+            myData.place(retrieveData(LOC_KEY));
+        }
+        else
+        {
+            myData.place(theLocation);
+        }   
+
         myData.temp(tempValue);
 
         checkRecord.addData(myData)
@@ -34,7 +49,7 @@ function addList()
         window.location = "history.html";
         
     }
-}
+x}
 
 function getBase64Image(img) {
     // Create an empty canvas element
