@@ -1,0 +1,17 @@
+#insert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#display_image{
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+
