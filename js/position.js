@@ -6,8 +6,8 @@ function getLocation() {
       navigator.geolocation.getCurrentPosition(position => {
           lat = position.coords.latitude;
           long = position.coords.longitude;
+          dataReverseGeo(position.coords.longitude, position.coords.latitude, "showData");
       });
-    dataReverseGeo(long, lat, "showData");
 
 }
 
@@ -19,4 +19,5 @@ function showData(result)
   
 getLocation();
 
-updateData(LOC_KEY, theLocation);
+
+setTimeout(() => {updateData(LOC_KEY, theLocation)}, 3000);

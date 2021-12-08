@@ -21,7 +21,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="../image/imageedit_1_5304525843.png" height="24" class="d-inline-block align-text-top">
+        <img src="image/imageedit_1_5304525843.png" height="24" class="d-inline-block align-text-top">
         EYE EYE
       </a>
       <ul class="nav justify-content-end" style="font-family: 'Montserrat', sans-serif;">
@@ -48,22 +48,19 @@
       <div class="card mb-5">
         <div class="row g-0">
           <div class="col-md-5">
-            <img src="../image/imageedit_1_5304525843.png" class="img-fluid rounded-start" >
+            <img src="image/imageedit_1_5304525843.png" class="img-fluid rounded-start" >
           </div>
           <div class="col-md-7">
             <div class="card-body" style="font-family: 'Montserrat', sans-serif;">
               <h1 class="card-title" style="text-align: center; line-height: 10vh;">REGISTER YOURSELF</h1>
-              <p class="card-text">Fill in your personal information<br></p>
               <div>
-                <input type="date" class="form-control" id="inputDate" placeholder="date">
-                <!-- <div id="validationDate" class="invalid-feedback">
-                  Please write correct date.
-                </div> -->
+                <h5>Date : <span id = "inputDate"></span></h2>
                 <br>
 
               </div>
               <div>
-                <input type="time" class="form-control" id="inputTime" placeholder="time">
+                <h5>Time : <span id = "inputTime"></span></h2>
+                <!-- <input type="time" class="form-control" id="inputTime" placeholder="time"> -->
                 <!-- <div id="validationTime" class="invalid-feedback">
                   Please write correct time.
                 </div> -->
@@ -71,15 +68,17 @@
                   
               </div>
               <div>
-                <input type="text" class="form-control " id="inputLocation" placeholder="Location">
+                <h5>Location : <span id = "inputLocation"></span></h2>
+                <!-- <input type="text" class="form-control " id="inputLocation" placeholder="Location"> -->
                 <!-- <div class="valid-feedback">is-invalid
                   Looks good!
                 </div> -->
                 <br>
               </div>
+              <p class="card-text">Fill Up Your Temperature<br></p>
               <input type="text" class="form-control" id="inputTemperature" placeholder="Temperature"><br>
               <div class="d-grid gap-2">
-                <button class="btn" type="button" style="background-color: #F27052;">SUBMIT</button>
+                <button class="btn" type="button" onclick="addList()" style="background-color: #F27052;">SUBMIT</button>
               </div>
             </div>
           </div>
@@ -88,6 +87,10 @@
     </div>
   </div>
   </div>
+  
 </body>
+
+<script src="js/shared.js"></script>
+<script src="js/add.js"></script>
 
 </html>

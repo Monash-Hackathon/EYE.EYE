@@ -35,7 +35,6 @@ function dataReverseGeo(lng, lat, callbackName) {
     //Define a variable to hold the data needed to be requested
     let data = {
         q: `${lat}+${lng}`,
-        countrycode: "MY",
         key: "46a38f2f952f4a65a8340cb1d569a8db",
         callback: callbackName
     }

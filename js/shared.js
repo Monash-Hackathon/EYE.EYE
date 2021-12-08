@@ -1,4 +1,3 @@
-
 const RECORD_KEY = "record";
 const DATA_KEY = "data";
 const LOC_KEY = "location";
