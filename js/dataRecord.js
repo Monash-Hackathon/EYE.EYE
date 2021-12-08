@@ -21,7 +21,7 @@ function riskLevel(temp)
 function recordList(data)
 {
     //Creating a empty string variable and HTML reference for the id queueContent
-    let listRef = document.getElementById("soemthing");
+    let listRef = document.getElementById("recordTable");
     let output = "";
 
     //Loop over the array and the student in the arrays
@@ -33,13 +33,14 @@ function recordList(data)
             theRecord.fromData(data[i]);
 
             //Adding the HTML code to display the list of the queue
-            output += `
-            <li class="mdl-list__item mdl-list__item--three-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <span> Date : ${theRecord.date} <br> Time : ${theRecord.time}<br> Location : ${theRecord.place} <br> Temp : ${theRecord.temp}
-                                    <br> Risk Level : ${riskLevel(theRecord.temp)}</span>
-                                </span>
-            </li>`;
+            output += `<tr>
+            <th scope="row">${i+1}</th>
+            <td>${theRecord.date}</td>
+            <td>${theRecord.time}</td>
+            <td>${theRecord.place}</td>
+            <td>${theRecord.temp}</td>
+            <td>${riskLevel(theRecord.temp)}</td>
+          </tr>`
         
     }
     //Print it into the web page
