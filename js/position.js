@@ -1,4 +1,3 @@
-let theLocation = ""
 
 function getLocation() {
     let lat = 0;
@@ -14,10 +13,16 @@ function getLocation() {
 function showData(result)
 {
     let data = result.results[0];
-    theLocation = data.formatted;
+    if (data != undefined)
+    {
+        updateData(LOC_KEY, data.formatted)
+    }
+    else
+    {
+        setTimeout(() => {updateData(LOC_KEY, data.formatted)}, 3000);
+    }
 }
   
 getLocation();
 
 
-setTimeout(() => {updateData(LOC_KEY, theLocation)}, 3000);
