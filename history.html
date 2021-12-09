@@ -5,100 +5,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/history.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <title>EYE EYE</title>
-    <style>
-        .input-group-text {
-            background: #F27052 !important;
-            color: white !important;
-            border: 0 !important;
-            border-radius: 0.25rem 0 0 0.25rem !important;
-            width: 100%;
-        }
-
-        .login_btn {
-            width: 100%;
-            background: #F27052 !important;
-            color: white !important;
-        }
-
-        .badge {
-            background-color: #497AA6;
-        }
-
-        .col-sm {
-            padding-left: 15px;
-            padding-right: 15px;
-
-        }
-
-        .col-sm-8 {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .col-sm-4 {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .col-sm-6 {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .row {
-            --bs-gutter-y: 10;
-            margin-bottom: 10;
-            margin-right: 0;
-            margin-left: 0;
-        }
-
-        .card-body a {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-        }
-
-        .card-body {
-            box-shadow: 4px 4px 12px 1px #686868;
-        }
-        .fixTableHead {
-      overflow-y: auto;
-      height: 400px;
-    }
-    .fixTableHead thead th {
-      position: sticky;
-      top: 0;
-    }
-    table {
-      border-collapse: collapse;        
-      width: 100%;
-    }
-    th,
-    td {
-      padding: 8px 15px;
-    }
-    th {
-      background: #497AA6;
-      
-    }
-    .card-text {
-      font-size: 25px;
-      text-align: right;
-    }
-    </style>
 </head>
 
 <body>
@@ -112,73 +28,57 @@
                 </a>
                 <ul class="nav justify-content-end" style="font-family: 'Montserrat', sans-serif;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Matt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="profile">
-                            LInk
-
-                            <!-- <span class="badge" id="profile-logo-name">Link</span> -->
+                        <a class="nav-link" href="index.html" id="profile">
+                            Register
                         </a>
-
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout'%}">Link</a>
-                    </li>
-                    <!--<li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li> -->
                 </ul>
             </div>
         </nav>
     </div>
 
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><b>User Info</b></h5>
-                                          <div class="fixTableHead">
-                                        <!-- <div style="height: 600px;overflow: scroll;"> -->
-                                        <table class="table">
-                                          <!-- <table class="table-primary"> -->
-                                            <thead>
-                                              <tr class="table-primary">
-                                                <th scope="col">#</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Time</th>
-                                                <th scope="col">Location</th>
-                                                <th scope="col">Temperature</th>
-                                                <th scope="col">Risk Level</th>
-                                              </tr>
-                                            </thead>
-                                            <span>
-                                            <tbody id="recordTable">
-                                              <tr>
-                                                <th scope="row">3</th>
-                                                <td>Legend</td>
-                                                <td>@twitter</td>
-                                                <td>012-3456789</td>
-                                                <td>06-08-2001</td>
-                                              </tr>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><b>User Info</b></h5>
+                    <div class="fixTableHead">
+                        <table class="table">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Temperature</th>
+                                    <th scope="col">Risk Level</th>
+                                </tr>
+                            </thead>
+                            <span>
+                                <tbody id="recordTable">
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Legend</td>
+                                        <td>@twitter</td>
+                                        <td>012-3456789</td>
+                                        <td>06-08-2001</td>
+                                    </tr>
 
-                                            </tbody>
-                                        </span>
-                                          </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <br>
+                                </tbody>
+                            </span>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
     </section>
 
 </body>
-    <script src="js/shared.js"></script>
-    <script src="js/dataRecord.js"></script>
-</html>
+<script src="js/shared.js"></script>
+<script src="js/dataRecord.js"></script>
 
+</html>
