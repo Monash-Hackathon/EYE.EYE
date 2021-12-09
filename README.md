@@ -1,13 +1,15 @@
+# Team No. 13
+
 # Theme
 Digitization
 
 # EYE.EYE
-EYE.EYE is a mobile web app that integrates MySejahtera to reduce the queue time and decrease the time lost for scanning the QRcode to enter public places by applying iris scanner with our firmware.
+EYE.EYE is a mobile web app that integrates MySejahtera to reduce the queue time and decrease the time lost for scanning the QRcode to enter public places by applying iris scanner with our firmware. Here, we will assume that our EYE.EYE and MySejahtera have been integrated, thus we have the access to their database and are able to make changes.
 
 # Description
 Our team decided on the solution that will have the most impact in our daily life during this mask era. Additionally, iris scanning is chosen since during this pandemic, everyone is wearing their mask at public places. Thus, iris scanner and our firmware will do the job quick and effectively.
 
-EYE.EYE provides 2 different interfaces, where one of them will be for the public places (index.html and user.html), and the other one (history.html) will be for MySejahtera user account in their own devices.  Combining both interfaces, EYE.EYE will have 3 main pages, which is the iris scanning page, user page (date, time, places, and temperature input), and the history page.
+EYE.EYE provides 2 different interfaces, where one of them will be for the public places (index.html and user.html), and the other one (history.html) will be for MySejahtera user account in their own devices.  Combining both interfaces, EYE.EYE will have 3 main pages, which is the iris scanning page, user page (date, time, places, and temperature input), and the history page. In this prototype, we also assumed that there is already one user registered to MySejahtera account with its iris image and with the name Matt.
 
 Firstly, the iris scanning page (index.html). As there is no sensor in the devices we are working on, iris image will be uploaded. For this prototype, the image will be converted to base64string and to be compared with the correct image. If the images match (Photos/correct_iris.jpg), the user will be directed to the user page or else, the user will be alerted. Also, in this page, the user will be asked to allow location access to gain the exact location. 
 
